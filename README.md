@@ -1,16 +1,13 @@
-# Gestión de Pedidos - Frontend (React Native)
+# Order Management - Frontend (React Native)
 
-# Descripción
+# Description
+This is a mobile application developed using React Native with Expo. It allows users to:
 
-Aplicación móvil desarrollada en React Native con Expo, que permite a los usuarios:
+- Select users and view their orders  
+- Check products within each order  
+- Interact with data retrieved from a Java/Spring Boot backend  
 
-Seleccionar usuarios y ver sus órdenes.
-
-Consultar productos de cada orden.
-
-Interactuar con datos obtenidos de un backend Java/Spring Boot.
-
- # Estructura del proyecto
+ # Project Structure
 src/
  ├─ pages/
  │   └─ UsuarioPage.js
@@ -23,9 +20,9 @@ src/
  └─ services/
      └─ usuarioService.js
 
-# Instalación
+# Installation
 
-Clonar el repositorio:
+Clone the repository:
 
 git clone https://github.com/brunopstyga/Gestion-de-pedidos-frontend.git
 cd Gestion-de-pedidos-frontend
@@ -35,59 +32,55 @@ Instalar dependencias:
 npm install
 
 
-# Ejecutar la app:
+# Run the App:
 
 npm start
 
 
-Para Android:
+Run on Android:
 
 npm run android
 
 
-Para iOS:
+Run on iOS:
 
 npm run ios
 
-# Pruebas Unitarias
+# Unit Testing
 
-Se utilizan Jest y @testing-library/react-native para testear componentes y hooks.
+This project uses Jest and @testing-library/react-native to test components and custom hooks.
 
 Componentes testeados
 
+Tested Components
+
 UsuarioPage
 
-Verifica que se renderiza correctamente.
+Verifies that the component renders correctly
+Checks that loaded users appear in the picker
+Ensures loading indicators (ActivityIndicator) are displayed while fetching data
 
-Comprueba que los usuarios cargados aparecen en el picker.
-
-Asegura que los indicadores de carga (ActivityIndicator) aparecen mientras se obtienen datos.
-
-Hooks personalizados
+Custom Hooks
 
 useUsuarios
 
-Testea que los usuarios se cargan correctamente desde el servicio.
-
-Mockea la API para no depender de datos reales.
+Tests that users are correctly loaded from the service
+Mocks the API to avoid dependency on real data
 
 useOrdenes
 
-Valida que al seleccionar un usuario se carguen sus órdenes.
-
-Comprueba comportamiento ante carga de datos y estados vacíos.
+Validates that selecting a user loads their orders
+Checks behavior during loading and empty states
 
 useProductos
 
-Asegura que al seleccionar un usuario y una orden, se carguen los productos correspondientes.
+Ensures that selecting a user and an order loads the corresponding products
+Mocks API responses to simulate backend behavior
 
-Mockea la API para simular respuestas del backend.
-
-Ejecutar tests
+Run tests
 npm test
 
-
-Todos los tests se ejecutan de manera aislada usando mocks para los servicios y comprueban que la UI reacciona correctamente a los cambios de estado y datos cargados.
+All tests run in isolation using mocked services and verify that the UI reacts correctly to state changes and loaded data.
 
 <img width="459" height="545" alt="2025-09-23 11_52_47-Window" src="https://github.com/user-attachments/assets/d8231500-f9dc-44e3-a05a-66ca2a238298" />
 
